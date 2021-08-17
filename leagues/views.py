@@ -31,9 +31,9 @@ def index(request):
 		"players_international": Player.objects.filter(curr_team__in=Team.objects.filter(league__in=(League.objects.filter(name="International Collegiate Baseball Conference")))),
 		"players_conferencia_lopez": Player.objects.filter(curr_team__in=Team.objects.filter(league__in=(League.objects.filter(name="American Conference of Amateur Football")))),
 		"players_futbol": Player.objects.filter(all_teams__in=Team.objects.filter(league__in=(League.objects.filter(name__contains="Football")))),
-		#"teams_sophia": Team.objects.filter(curr_team__in=Player.objects.filter(first_name__contains="Sophia")),
-		#"leagues_sophia": Player.objects. 
-		#"players_flores_no": Player.objects.
+		"teams_sophia": Team.objects.filter(team_name__in=Player.objects.filter(first_name__contains="Sophia")),
+		"leagues_sophia": League.objects.filter(name__in=Player.objects.filter(first_name__contains="Sophia")),
+		#"players_flores_no": Player.objects.filter(last_name__contains="Flores").exclude(Team.objects.filter(team_name__contains= "Washington Roughriders")),
 		#"teams_samuel"
 		#"players_gatos"
 		#"players_wichita_old"
