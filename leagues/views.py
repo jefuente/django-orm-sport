@@ -26,6 +26,20 @@ def index(request):
 		"players_cooper_excepto_joshua": Player.objects.filter(last_name__contains="Cooper").exclude(first_name__icontains="Joshua"),
 		"players_Alexander_or_Wyatt": Player.objects.filter(first_name__contains="Alexander")|Player.objects.filter(first_name__contains="Wyatt"),
 
+		"teams_atlantic": Team.objects.filter(league=League.objects.get(name="Atlantic Soccer Conference")),
+		"players_bostons": Player.objects.filter(curr_team=Team.objects.get(location="Boston", team_name= "Penguins")),
+		"players_international": Player.objects.filter(curr_team__in=Team.objects.filter(league__in=(League.objects.filter(name="International Collegiate Baseball Conference")))),
+		"players_conferencia_lopez": Player.objects.filter(curr_team__in=Team.objects.filter(league__in=(League.objects.filter(name="American Conference of Amateur Football")))),
+		"players_futbol": Player.objects.filter(all_teams__in=Team.objects.filter(league__in=(League.objects.filter(name__contains="Football")))),
+		#"teams_sophia": Team.objects.filter(curr_team__in=Player.objects.filter(first_name__contains="Sophia")),
+		#"leagues_sophia": Player.objects. 
+		#"players_flores_no": Player.objects.
+		#"teams_samuel"
+		#"players_gatos"
+		#"players_wichita_old"
+		#"team_gray"
+		#"players_joshua_no"
+		#"teams_12"
 		
 
 
