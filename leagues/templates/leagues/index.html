@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Sports Leagues</title>
+	</head>
+	<body>
+
+		<h1>1. todas las ligas de béisbol</h1>
+		<ol>
+			{% for league in ligas_baseball %}
+				<li>{{league.name}}</li>
+			{% empty %}
+				<p>No leagues found.</p>
+			{% endfor %}
+		</ol>
+		<h1>2. todas las ligas de mujeres</h1>
+		<ol>
+			{% for league in ligas_mujeres %}
+				<li>{{league.name}}</li>
+			{% empty %}
+				<p>No leagues found.</p>
+			{% endfor %}
+		</ol>
+		<h1>3. todas las ligas donde el deporte es cualquier tipo de hockey</h1>
+		<ol>
+			{% for league in ligas_hockey %}
+				<li>{{league.name}}</li>
+			{% empty %}
+				<p>No leagues found.</p>
+			{% endfor %}
+		</ol>	
+		<h1>4. todas las ligas donde el deporte no sea football</h1>
+		<ol>
+			{% for league in ligas_no_football %}
+				<li>{{league.name}}</li>
+			{% empty %}
+				<p>No leagues found.</p>
+			{% endfor %}
+		</ol>
+		<h1>5. todas las ligas que se llaman "conferencias"</h1>
+		<ol>
+			{% for league in conferencias %}
+				<li>{{league.name}}</li>
+			{% empty %}
+				<p>No leagues found.</p>
+			{% endfor %}
+		</ol>
+		<h1>6. todas las ligas de la región atlántica</h1>
+		<ol>
+			{% for league in atlantica %}
+				<li>{{league.name}}</li>
+			{% empty %}
+				<p>No leagues found.</p>
+			{% endfor %}
+		</ol>
+		<h1>7. todos los equipos con sede en Dallas</h1>
+		<ol>
+			{% for team in teams_dallas %}
+				<li>{{team.location}} {{team.team_name}}</li>
+			{% empty %}
+				<p>No teams found.</p>
+			{% endfor %}
+		</ol>
+		<h1>8. todos los equipos nombraron los Raptors</h1>
+		<ol>
+			{% for team in teams_raptors %}
+				<li>{{team.location}} {{team.team_name}}</li>
+			{% empty %}
+				<p>No teams found.</p>
+			{% endfor %}
+		</ol>
+		<h1>9. todos los equipos cuya ubicación incluye "Ciudad"</h1>
+		<ol>
+			{% for team in teams_city %}
+				<li>{{team.location}} {{team.team_name}}</li>
+			{% empty %}
+				<p>No teams found.</p>
+			{% endfor %}
+		</ol>
+		<h1>10. todos los equipos cuyos nombres comienzan con "T"</h1>
+		<ol>
+			{% for team in teams_t %}
+				<li>{{team.location}} {{team.team_name}}</li>
+			{% empty %}
+				<p>No teams found.</p>
+			{% endfor %}
+		</ol>
+		<h1>11. todos los equipos, ordenados alfabéticamente por ubicación</h1>
+		<ol>
+			{% for team in teams_ordenlocation %}
+				<li>{{team.location}} {{team.team_name}}</li>
+			{% empty %}
+				<p>No teams found.</p>
+			{% endfor %}
+		</ol>
+		<h1>12. todos los equipos, ordenados por nombre de equipo en orden alfabético inverso</h1>
+		<ol>
+			{% for team in teams_ordeninverso %}
+				<li>{{team.location}} {{team.team_name}}</li>
+			{% empty %}
+				<p>No teams found.</p>
+			{% endfor %}
+		</ol>
+		<h1>13. cada jugador con apellido "Cooper"</h1>
+		<ol>
+			{% for player in players_cooper %}
+				<li>{{player.first_name}} {{player.last_name}}</li>
+			{% empty %}
+				<p>No players found.</p>
+			{% endfor %}
+		</ol>
+		<h1>14. cada jugador con nombre "Joshua"</h1>
+		<ol>
+			{% for player in players_joshua %}
+				<li>{{player.first_name}} {{player.last_name}}</li>
+			{% empty %}
+				<p>No players found.</p>
+			{% endfor %}
+		</ol>
+		<h1>15. todos los jugadores con el apellido "Cooper" EXCEPTO aquellos con "Joshua" como primer nombre</h1>
+		<ol>
+			{% for player in players_cooper_excepto_joshua %}
+				<li>{{player.first_name}} {{player.last_name}}</li>
+			{% empty %}
+				<p>No players found.</p>
+			{% endfor %}
+		</ol>
+		<h1>16. todos los jugadores con nombre "Alexander" O nombre "Wyatt"</h1>
+		<ol>
+			{% for player in players_Alexander_or_Wyatt %}
+				<li>{{player.first_name}} {{player.last_name}}</li>
+			{% empty %}
+				<p>No players found.</p>
+			{% endfor %}
+		</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
