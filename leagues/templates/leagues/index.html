@@ -152,7 +152,6 @@
 		</ol>
 
 		<h1>2. todos los jugadores (actuales) en los Boston Penguins</h1>
-		
 		<ol>
 			{% for player in players_bostons %}
 				<li>{{player.first_name}} {{player.last_name}} ({{player.curr_team.location}} {{player.curr_team.team_name}} // {{player.curr_team.league.name}})</li>
@@ -161,8 +160,7 @@
 			{% endfor %}
 		</ol>
 
-		<h1>3. todos los jugadores (actuales) en la International Collegiate Baseball Conference</h1>
-		
+		<h1>3. todos los jugadores (actuales) en la International Collegiate Baseball Conference</h1>	
 		<ol>
 			{% for player in players_international %}
 				<li>{{player.first_name}} {{player.last_name}} ({{player.curr_team.location}} {{player.curr_team.team_name}} // {{player.curr_team.league.name}})</li>
@@ -180,8 +178,7 @@
 			{% endfor %}
 		</ol>
 
-		<h1>5. todos los jugadores de fútbol</h1>
-		
+		<h1>5. todos los jugadores de fútbol</h1>		
 		<ol>
 			{% for player in players_futbol %}
 				<li>{{player.first_name}} {{player.last_name}} ({{player.curr_team.location}} {{player.curr_team.team_name}} // {{player.curr_team.league.name}})</li>
@@ -209,9 +206,7 @@
 		</ol>
 
 
-		<h1>8. todos con el apellido "Flores" que NO (actualmente) juegan para los Washington Roughriders</h1>
-		
-		
+		<h1>8. todos con el apellido "Flores" que NO (actualmente) juegan para los Washington Roughriders</h1>			
 		<ol>
 			{% for player in players_flores_no %}
 				<li> {{player.first_name}} {{player.last_name}} ({{player.curr_team.location}} {{player.curr_team.team_name}} // {{player.curr_team.league.name}})</li>
@@ -221,7 +216,6 @@
 		</ol>
 
 		<h1>9. todos los equipos, pasados y presentes, con los que Samuel Evans ha jugado</h1>
-		
 		<ol>
 			{% for team in teams_samuel %}
 				<li> {{team.location}} {{team.team_name}} </li>
@@ -230,9 +224,7 @@
 			{% endfor %}
 		</ol>
 
-
-		<h1>10. todos los jugadores, pasados y presentes, con los gatos tigre de Manitoba</h1>
-		
+		<h1>10. todos los jugadores, pasados y presentes, con los gatos tigre de Manitoba</h1>	
 		<ol>
 			{% for player in players_gatos %}
 				<li> {{player.first_name}} {{player.last_name}} ({{player.curr_team.location}} {{player.curr_team.team_name}} // {{player.curr_team.league.name}}) </li>
@@ -249,8 +241,8 @@
 				<p>No players found.</p>
 			{% endfor %}
 		</ol>
-		<h1>12. cada equipo para el que Jacob Gray jugó antes de unirse a los Oregon Colts</h1>
-		
+
+		<h1>12. cada equipo para el que Jacob Gray jugó antes de unirse a los Oregon Colts</h1>		
 		<ol>
 			{% for team in team_gray %}
 				<li> {{player.first_name}} {{player.last_name}} ({{player.curr_team.location}} {{player.curr_team.team_name}} // {{player.curr_team.league_name}}) </li>
@@ -260,7 +252,6 @@
 		</ol>
 
 		<h1>13. todos llamados "Joshua" que alguna vez han jugado en la Federación Atlántica de Jugadores de Béisbol Amateur</h1>
-
 		<ol>
 			{% for player in players_joshua_no %}
 				<li> {{player.first_name}} {{player.last_name}} ({{player.curr_team.location}} {{player.curr_team.team_name}} // {{player.curr_team.league_name}})</li>
@@ -270,7 +261,6 @@
 		</ol>
 
 		<h1>14. todos los equipos que han tenido 12 o más jugadores, pasados y presentes. (SUGERENCIA: busque la función de anotación de Django).</h1>
-
 		<ol>
 			{% for team in teams_12 %}
 				<li> {{team.location}} {{team.team_name}} </li>
